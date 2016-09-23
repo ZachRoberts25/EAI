@@ -4,6 +4,8 @@ import math
 
 def websiteCrawler(numberOfWebsites):
     if numberOfWebsites < 26:
+        if numberOfWebsites <= 0:
+            print "Please enter a number greater than 0"
         array1 = []
         body = urllib2.urlopen("http://www.alexa.com/topsites/global;0").read()
         array = re.findall("href=\"/siteinfo/.*", body)
